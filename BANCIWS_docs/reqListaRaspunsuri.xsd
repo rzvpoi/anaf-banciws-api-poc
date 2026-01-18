@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="mfp:anaf:dgti:banci:reqListaRaspunsuri:v1"
+	targetNamespace="mfp:anaf:dgti:banci:reqListaRaspunsuri:v1" elementFormDefault="qualified"
+	attributeFormDefault="unqualified" version="1.0" xml:lang="ro">
+	<xs:element name="header">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="xs:anyType">
+					<xs:sequence>
+						<xs:element name="listaRaspunsuri" type="listaMesajeType"/>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="listaMesajeType">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">			
+
+				<xs:attribute name="Zile" type="Str5" use="required"/>			
+
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="Str5">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

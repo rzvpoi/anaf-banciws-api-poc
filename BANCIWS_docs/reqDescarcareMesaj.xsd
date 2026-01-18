@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="mfp:anaf:dgti:banci:reqDescarcareMesaj:v1"
+	targetNamespace="mfp:anaf:dgti:banci:reqDescarcareMesaj:v1" elementFormDefault="qualified"
+	attributeFormDefault="unqualified" version="1.0" xml:lang="ro">
+	<xs:element name="header">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="xs:anyType">
+					<xs:attribute name="id_portal" type="IntPoz15SType" use="required"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:simpleType name="IntPoz15SType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="999999999999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>
